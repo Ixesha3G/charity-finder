@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import locaionLogo from '../assets/location.svg'
 
 interface Charity {
 	coverImageUrl: string;
@@ -136,7 +137,7 @@ const CharityDetail = ({
 						</div>
 					</div>
 					<div className='flex items-center my-6'>
-						<img className='mr-2 w-5 h-5' src='/src/assets/location.svg' />
+						<img className='mr-2 w-5 h-5' src={locaionLogo} />
 						<div>{charityDetail.length && charityDetail[0].location}</div>
 					</div>
 					<div className='w-full'>

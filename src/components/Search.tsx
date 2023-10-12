@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import logoImg from '../assets/logo.png'
+import searchImg from '../assets/search.svg'
+import favoritesImg from '../assets/favorites.svg'
 
 const Search = (): JSX.Element => {
 	const [searchInput, setSearchInput] = useState('');
@@ -81,7 +84,7 @@ const Search = (): JSX.Element => {
 								<span className='self-center text-2xl text-white font-bold whitespace-nowrap'>
 									Charity Finder
 								</span>
-								<img className='w-10 h-10 mr-3' src='/src/assets/logo.png' />
+								<img className='w-10 h-10 mr-3' src={logoImg} />
 							</div>
 						</a>
 						<div className='drop-shadow-md mt-4 px-4 md:my-auto'>
@@ -93,7 +96,7 @@ const Search = (): JSX.Element => {
 										console.log(searchInput);
 									}}
 								>
-									<img className='w-5 h-5' src='/src/assets/search.svg' />
+									<img className='w-5 h-5' src={searchImg} />
 								</button>
 								<input
 									type='text'
@@ -125,7 +128,7 @@ const Search = (): JSX.Element => {
 									type='button'
 									className='space-x-2 items-center border-0 rounded-full p-3 bg-white hover:bg-[#E2E2E2] duration-300'
 								>
-									<img src='/src/assets/favorites.svg' />
+									<img src={favoritesImg} />
 								</button>
 							</a>
 						</div>

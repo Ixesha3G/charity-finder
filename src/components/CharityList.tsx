@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import CharityCard from './CharityCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import backgroundImg from '../assets/background.jpeg'
 
 interface Charity {
 	coverImageUrl: string;
@@ -109,7 +110,7 @@ const CharityList = ({ homePage, charityList }: CharityListProps) => {
 				<div className='pb-4'>
 					<div
 						className='flex items-center justify-center w-full h-96 bg-cover bg-center'
-						style={{ backgroundImage: `url('/src/assets/background.jpeg')` }}
+						style={{ backgroundImage: `url(${backgroundImg})` }}
 					>
 						<span className='text-center font-prompt tracking-wider text-rose-500 font-bold text-2xl sm:text-5xl'>
 							Changing The World Through Kindness
