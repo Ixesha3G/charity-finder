@@ -3,20 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import locaionLogo from '../assets/location.svg';
-
-interface Charity {
-	coverImageUrl: string;
-	description: string;
-	ein: number;
-	location: string;
-	logoCloudinaryId: string;
-	logoUrl: string;
-	matchedTerms: Array<string>;
-	name: string;
-	profileUrl: string;
-	slug: string;
-	tags: Array<string>;
-}
+import { Charity } from '../interfaces/Charity'
 
 interface CharityDetailProps {
 	favorites: Array<Charity>;

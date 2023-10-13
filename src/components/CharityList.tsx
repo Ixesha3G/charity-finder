@@ -3,20 +3,7 @@ import CharityCard from './CharityCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import backgroundImg from '../assets/background.jpeg'
-
-interface Charity {
-	coverImageUrl: string;
-	description: string;
-	ein: number;
-	location: string;
-	logoCloudinaryId: string;
-	logoUrl: string;
-	matchedTerms: Array<string>;
-	name: string;
-	profileUrl: string;
-	slug: string;
-	tags: Array<string>;
-}
+import { Charity } from '../interfaces/Charity'
 
 interface CharityListProps {
 	homePage: boolean;

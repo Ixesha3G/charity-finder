@@ -1,20 +1,7 @@
 import { Link } from 'react-router-dom';
 import charityLogo from '../assets/charitylogo.svg';
 import locaionLogo from '../assets/location.svg';
-
-interface Charity {
-	coverImageUrl: string;
-	description: string;
-	ein: number;
-	location: string;
-	logoCloudinaryId: string;
-	logoUrl: string;
-	matchedTerms: Array<string>;
-	name: string;
-	profileUrl: string;
-	slug: string;
-	tags: Array<string>;
-}
+import { Charity } from '../interfaces/Charity'
 
 interface CharityCardProps {
 	charity: Charity;
