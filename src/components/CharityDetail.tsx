@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import locaionLogo from '../assets/location.svg'
+import locaionLogo from '../assets/location.svg';
 
 interface Charity {
 	coverImageUrl: string;
@@ -102,17 +103,17 @@ const CharityDetail = ({
 							</h1>
 						</div>
 						<div className='flex items-center'>
-							<a
+							<Link
 								className='px-2'
-								href={
+								to={
 									(charityDetail.length && charityDetail[0].profileUrl) ||
-									undefined
+									''
 								}
 							>
 								<button className='px-4 py-3 w-full bg-emerald-800 rounded-3xl text-white font-bold hover:bg-emerald-950 duration-300'>
 									Check it in Every.org
 								</button>
-							</a>
+							</Link>
 							<a className='pl-2'>
 								{favoriteFlag ? (
 									<button
@@ -151,17 +152,17 @@ const CharityDetail = ({
 							{charityDetail.length &&
 								charityDetail[0].tags.map((tag, idx) => {
 									return (
-										<a
+										<Link
 											key={idx}
 											className='bg-slate-500 text-white px-2 py-2 m-2 rounded-3xl shadow-md hover:bg-slate-600 duration-300'
-											href={
+											to={
 												(charityDetail.length &&
 													`/search/${charityDetail[0].tags[idx]}`) ||
-												undefined
+												''
 											}
 										>
 											{tag}
-										</a>
+										</Link>
 									);
 								})}
 						</div>

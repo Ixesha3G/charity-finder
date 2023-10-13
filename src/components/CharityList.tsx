@@ -120,7 +120,7 @@ const CharityList = ({ homePage, charityList }: CharityListProps) => {
 			)}
 			<div className='mb-14'>
 				<h1 className='pt-8 text-3xl mt-2 font-semibold flex justify-center text-gray-700'>
-					{homePage ? 'You May Interest' : 'Search results for: '}
+					{homePage ? 'You May Interest' : `Search results for: ${cause}`}
 				</h1>
 				<div className='px-4 mt-5 grid justify-items-center grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-3 md:px-20'>
 					{charityListState.map((charity, idx) => {

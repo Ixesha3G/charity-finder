@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import logoImg from '../assets/logo.png'
@@ -79,14 +80,14 @@ const Search = (): JSX.Element => {
 			<header>
 				<nav className='py-6 bg-slate-700 font-ubuntu'>
 					<div className='container mx-auto items-center justify-around md:flex md:flex-wrap'>
-						<a href='/'>
+						<Link to='/'>
 							<div className='flex justify-center w-full items-center lg:w-14'>
 								<span className='self-center text-2xl text-white font-bold whitespace-nowrap'>
 									Charity Finder
 								</span>
 								<img className='w-10 h-10 mr-3' src={logoImg} />
 							</div>
-						</a>
+						</Link>
 						<div className='drop-shadow-md mt-4 px-4 md:my-auto'>
 							<div className='relative'>
 								<button
@@ -123,14 +124,14 @@ const Search = (): JSX.Element => {
 							</div>
 						</div>
 						<div className='flex mt-6 justify-center md:my-auto'>
-							<a href='/favorites'>
+							<Link to='/favorites'>
 								<button
 									type='button'
 									className='space-x-2 items-center border-0 rounded-full p-3 bg-white hover:bg-[#E2E2E2] duration-300'
 								>
 									<img src={favoritesImg} />
 								</button>
-							</a>
+							</Link>
 						</div>
 					</div>
 				</nav>
