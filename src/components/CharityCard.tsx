@@ -1,4 +1,4 @@
-import charityLogo from '../assets/charityLogo.svg'
+import charityLogo from '../assets/charitylogo.svg'
 import locaionLogo from '../assets/location.svg'
 
 interface Charity {
